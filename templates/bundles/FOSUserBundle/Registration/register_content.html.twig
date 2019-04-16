@@ -1,0 +1,40 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'login100-form validate-form'}}) }}
+<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+<span class="login100-form-title p-b-34 p-t-27">
+						SIGN UP
+					</span>
+
+
+<div class="wrap-input100 validate-input" data-validate = "Enter username">
+	{{ form_widget(form.username, {'attr': {'class': 'input100', 'placeholder':"Username"}}) }}
+	<span class="focus-input100" data-placeholder="&#xf207;"></span>
+</div>
+
+<div class="wrap-input100 validate-input" data-validate = "Enter username">
+	{{ form_widget(form.email, {'attr': {'class': 'input100', 'placeholder':"Email"}}) }}
+	<span class="focus-input100" data-placeholder="&#xf207;"></span>
+</div>
+
+<div class="wrap-input100 validate-input" data-validate = "Enter username">
+	{{ form_widget(form.birthday, {'attr': {'class': 'input100', 'placeholder':"Birthday"}}) }}
+	<span class="focus-input100" data-placeholder="&#xf207;"></span>
+</div>
+<div class="wrap-input100 validate-input" >
+	{{ form_widget(form.plainPassword) }}
+</div>
+
+
+<div class="container-login100-form-btn">
+    <button class="login100-form-btn" type="submit" id="_submit" name="_submit"  >Register</button>
+</div>
+{{ form_end(form) }}
+<div class="text-center p-t-30">
+	<a class="txt1" href="{{ path('fos_user_security_login') }}">
+		Go back
+	</a>
+</div>

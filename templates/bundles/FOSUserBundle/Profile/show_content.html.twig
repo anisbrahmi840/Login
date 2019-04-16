@@ -1,0 +1,23 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    <span class="login100-form-logo">
+        <i class="zmdi zmdi-landscape"></i>
+    </span>
+    <span class="login100-form-title p-b-34 p-t-27">
+						Profile
+					</span>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn"  id="_submit" name="_submit"  >{{ user.username }}</button>
+    </div>
+    <br>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn"  id="_submit" name="_submit"  >{{ user.email }}</button>
+    </div>
+    <br>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn"  id="_submit" name="_submit"  >{{ user.birthday|date("m/d/Y") }}</button>
+    </div>
+    <br>
+    <a  class="container btn btn-outline-danger" href="{{ path('fos_user_security_logout') }}">Logout</a>
+</div>
