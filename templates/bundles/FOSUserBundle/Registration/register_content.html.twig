@@ -1,5 +1,7 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+
+
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'login100-form validate-form'}}) }}
 <span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
@@ -8,6 +10,12 @@
 <span class="login100-form-title p-b-34 p-t-27">
 						SIGN UP
 					</span>
+
+<ul>
+    {% for error in errors %}
+		<li>{{ error.message }}</li>
+    {% endfor %}
+</ul>
 
 
 <div class="wrap-input100 validate-input" data-validate = "Enter username">
